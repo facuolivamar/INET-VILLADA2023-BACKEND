@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -41,7 +42,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "api.apps.ApiConfig",
     "channels",
-    
+    'ButtonAlert',
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+# Backend/settings.py
+# Daphne
+ASGI_APPLICATION = "Backend.asgi.application"
