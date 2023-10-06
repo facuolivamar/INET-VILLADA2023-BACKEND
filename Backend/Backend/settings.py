@@ -130,11 +130,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Backend/settings.py
 # Daphne
 ASGI_APPLICATION = "Backend.asgi.application"
+
 CHANNEL_LAYERS = {
-    "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
-        },
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
     },
 }
