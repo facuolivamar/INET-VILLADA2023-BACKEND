@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     "api.apps.ApiConfig",
     "channels",
     'ButtonAlert',
-    "BackendApp",
 ]
 
 MIDDLEWARE = [
