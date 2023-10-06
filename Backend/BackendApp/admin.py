@@ -3,9 +3,9 @@ from django.db import models
 from .models import *
 
 # Register your models here.
-admin.site.site_header = "Stock"
-admin.site.index_title = "Stock"
-admin.site.site_title = "Stock"
+admin.site.site_header = "Hospital"
+admin.site.index_title = "Hospital"
+admin.site.site_title = "Hospital"
 
 class CustomUserAdmin(admin.ModelAdmin):
     list_display = (

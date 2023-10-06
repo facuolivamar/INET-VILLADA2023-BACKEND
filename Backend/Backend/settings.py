@@ -114,9 +114,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Cordoba"
 
 USE_I18N = True
 
@@ -187,23 +187,7 @@ JAZZMIN_SETTINGS = {
 
     # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
     "order_with_respect_to": ["auth", "books", "books.author", "books.book"],
-
-
-    #aca van los de la navar
-    "topmenu_links": [
-
-        # external url that opens in a new window (Permissions can be added)
-        {"name": "Tienda ", "url": "http://127.0.0.1:3000/tienda", "new_window": False},
-
-        # external url that opens in a new window (Permissions can be added)
-        {"name": "Presupuesto", "url": "http://127.0.0.1:3000/presupuesto", "new_window": False},
-
-        # external url that opens in a new window (Permissions can be added)
-        {"name": "Prestamo", "url": "http://127.0.0.1:3000/prestamo", "new_window": False},
-
         
-
-    ],
     # Custom links to append to app groups, keyed on app name
     "custom_links": {
         "books": [{
@@ -220,7 +204,14 @@ JAZZMIN_SETTINGS = {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",
         "auth.Group": "fas fa-users",
-        "BackendApp.BloodType":"fas fa-box",
+        "BackendApp.BloodType":"fas fa-hand-holding-medical",
+        "BackendApp.SocialPlan":"fas fa-money-check-alt",
+        "BackendApp.CustomUser":"fas fa-user",
+        "BackendApp.Room":"fas fa-bed",
+        "BackendApp.Doctor":"fas fa-user-md",
+        "BackendApp.Calls":"fas fa-phone-volume",
+        "BackendApp.Patient":"fas fa-male",
+
     },
 
     # Icons that are used when one is not manually specified
@@ -242,9 +233,7 @@ JAZZMIN_SETTINGS = {
     # Whether to show the UI customizer on the sidebar
     "show_ui_builder": False,
 
-    "usermenu_links": [
-        {"name": "Token", "url": "http://127.0.0.1:8000/admin/ElectroStockApp/tokensignup/", "new_window": False, "icon":"fas fa-user-secret",},
-    ],
+
     
     ###############
     # Change view #
@@ -265,24 +254,24 @@ JAZZMIN_SETTINGS["show_ui_builder"] = True
 JAZZMIN_UI_TWEAKS = {
     "navbar_small_text": False,
     "footer_small_text": False,
-    "body_small_text": False,
+    "body_small_text": True,
     "brand_small_text": False,
     "brand_colour": False,
     "accent": "accent-primary",
-    "navbar": "navbar-dark",
+    "navbar": "navbar-white navbar-light",
     "no_navbar_border": False,
     "navbar_fixed": False,
     "layout_boxed": False,
     "footer_fixed": False,
     "sidebar_fixed": True,
-    "sidebar": "sidebar-dark-info",
+    "sidebar": "sidebar-dark-primary",
     "sidebar_nav_small_text": False,
     "sidebar_disable_expand": False,
-    "sidebar_nav_child_indent": False,
-    "sidebar_nav_compact_style": False,
+    "sidebar_nav_child_indent": True,
+    "sidebar_nav_compact_style": True,
     "sidebar_nav_legacy_style": False,
     "sidebar_nav_flat_style": False,
-    "theme": "litera",
+    "theme": "flatly",
     "dark_mode_theme": None,
     "button_classes": {
         "primary": "btn-outline-primary",
