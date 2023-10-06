@@ -22,3 +22,6 @@ def Test(request):
     if request.method == "GET":
        return Response("Test anda")
     return Response(status=405)
+
+
+
