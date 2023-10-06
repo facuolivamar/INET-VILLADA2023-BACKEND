@@ -7,6 +7,7 @@ django-jazzmin==2.5.0
 django-jet==1.0.8
 django-ninja==0.19.1
 djangorestframework==3.14.0
+gunicorn==21.2.0
 mysqlclient==2.1.1
 pydantic==1.10.2
 PyMySQL==1.1.0
