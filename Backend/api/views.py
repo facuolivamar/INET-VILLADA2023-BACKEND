@@ -12,16 +12,31 @@ from django.http import JsonResponse
 from django.contrib.auth import get_user_model, get_user
 from django.contrib.auth.models import Group
 from rest_framework.decorators import api_view
+from BackendApp.models import Doctor, Calls, Patient, Room, BloodType, SocialPlan
+from .serializers import DoctorSerializer, CallsSerializer, PatientSerializer, RoomSerializer, BloodTypeSerializer, SocialPlanSerializer
 
+class DoctorViewSet(viewsets.ModelViewSet):
+    queryset = Doctor.objects.all()
+    serializer_class = DoctorSerializer
 
+class CallsViewSet(viewsets.ModelViewSet):
+    queryset = Calls.objects.all()
+    serializer_class = CallsSerializer
 
+class PatientViewSet(viewsets.ModelViewSet):
+    queryset = Patient.objects.all()
+    serializer_class = PatientSerializer
 
+class RoomViewSet(viewsets.ModelViewSet):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializer
 
-@api_view(["GET"])
-def Test(request):
-    if request.method == "GET":
-       return Response("Test anda")
-    return Response(status=405)
+class BloodTypeViewSet(viewsets.ModelViewSet):
+    queryset = BloodType.objects.all()
+    serializer_class = BloodTypeSerializer
 
+class SocialPlanViewSet(viewsets.ModelViewSet):
+    queryset = SocialPlan.objects.all()
+    serializer_class = SocialPlanSerializer
 
 
