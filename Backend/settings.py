@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-hp8q421fppldlx%eh066c)h$9*4cgue)cn3s487)5960_gb5tq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['inet-villada2023-backend-production.up.railway.app']
 
 
 # Application definition
@@ -58,6 +58,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "Backend.urls"
+
+CSRF_TRUSTED_ORIGINS = ['https://*.mydomain.com','https://*.127.0.0.1','http://127.0.0.1:3000', 'https://inet-villada2023-backend-production.up.railway.app']
 
 TEMPLATES = [
     {
