@@ -1,5 +1,6 @@
 asgiref==3.5.2
 channels==4.0.0
+daphne
 Django==4.1
 django-jazzmin==2.5.0
 django-jet==1.0.8
