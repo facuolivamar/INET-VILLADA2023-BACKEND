@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['inet-villada2023-backend-production.up.railway.app']
 
 INSTALLED_APPS = [
     "jazzmin",
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -41,7 +42,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "BackendApp",
-    "daphne",
     "api.apps.ApiConfig",
     "channels",
     'ButtonAlert',
